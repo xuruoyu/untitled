@@ -39,24 +39,6 @@
           </item>
          </layout>
         </item>
-        <item row="7" column="0" rowspan="2" colspan="2">
-         <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="0">
-           <widget class="QPushButton" name="pushButton_add_new_word">
-            <property name="text">
-             <string>添加单词</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QPushButton" name="pushButton_refresh">
-            <property name="text">
-             <string>刷新</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
         <item row="4" column="1">
          <widget class="QListWidget" name="listWidget_sample"/>
         </item>
@@ -85,23 +67,45 @@
           </item>
          </layout>
         </item>
-        <item row="4" column="0" rowspan="2">
+        <item row="6" column="1">
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_remeber">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>70</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>记住了</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_refresh">
+            <property name="minimumSize">
+             <size>
+              <width>180</width>
+              <height>70</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>没记住</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>例句：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" rowspan="5">
          <widget class="QTableWidget" name="tableWidget_word_list">
-          <row>
-           <property name="text">
-            <string>1</string>
-           </property>
-          </row>
-          <row>
-           <property name="text">
-            <string>2</string>
-           </property>
-          </row>
-          <row>
-           <property name="text">
-            <string>3</string>
-           </property>
-          </row>
           <column>
            <property name="text">
             <string>记忆次数</string>
@@ -119,26 +123,6 @@
             </font>
            </property>
           </column>
-          <column>
-           <property name="text">
-            <string>解释</string>
-           </property>
-          </column>
-          <item row="0" column="0">
-           <property name="text">
-            <string>1</string>
-           </property>
-          </item>
-          <item row="0" column="1">
-           <property name="text">
-            <string>恶趣味趣味齐全</string>
-           </property>
-          </item>
-          <item row="0" column="2">
-           <property name="text">
-            <string> 阿撒打算打算的</string>
-           </property>
-          </item>
          </widget>
         </item>
        </layout>
@@ -147,25 +131,126 @@
        <attribute name="title">
         <string>添加单词</string>
        </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="3" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>解释:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_add_new_explain"/>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>单词:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_add_new_word"/>
+          </item>
+         </layout>
+        </item>
+        <item row="5" column="1">
+         <widget class="QPushButton" name="pushButton_addNewWord">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>添加</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
-        <string>还没想好2</string>
+        <string>例句</string>
        </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="2" column="2">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>例句：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="lineEdit_add_new_sample"/>
+        </item>
+        <item row="4" column="3">
+         <widget class="QPushButton" name="pushButton_add_new_sample">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>添加</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" rowspan="4">
+         <widget class="QListWidget" name="listWidget_word_list"/>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="lineEdit_add_new_sample_explain"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>解释：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>单词列表</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2" colspan="2">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>例句</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" colspan="2">
+         <widget class="QListWidget" name="listWidget_sample_list"/>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>22</height>
-    </rect>
-   </property>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

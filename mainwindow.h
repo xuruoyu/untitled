@@ -20,11 +20,19 @@ private slots:
 
     void on_tableWidget_word_list_clicked(const QModelIndex &index);
 
-    void on_pushButton_add_new_word_clicked();
+    void on_pushButton_remeber_clicked();
+
+    void on_pushButton_addNewWord_clicked();
+
+    void on_listWidget_word_list_clicked(const QModelIndex &index);
+
+    void on_pushButton_add_new_sample_clicked();
 
 private:
     Ui::MainWindow *ui;
     void reload_wordlist();
+    void reload_wordListFroSample();
+    void reload_listWidget_sample_list();
 
 };
 
